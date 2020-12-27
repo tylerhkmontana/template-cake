@@ -75,7 +75,8 @@ export default function Home(props) {
                 <input className={styles.input_text} type="text" placeholder="your name"/>
                 <input className={styles.input_text} type="text" placeholder="buisness name"/>
                 <input className={styles.input_text} type="email" placeholder="your email"/>
-                <textarea className={styles.input_textarea} placeholder="how may I help you?"/>
+                <textarea className={styles.input_textarea} placeholder="how may we help you?"/>
+                <button className={styles.input_btn}>Send</button>
               </div>
           </div>
         </div>

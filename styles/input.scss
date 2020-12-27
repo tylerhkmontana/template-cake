@@ -3,6 +3,7 @@
 %input_text {
   border: none;
   background-color: transparent;
+  font-family: 'Dancing Script';
   outline: none;
   border-bottom: 2px solid white;
   color: white;
@@ -26,6 +27,8 @@
   background-color: transparent;
   border-radius: 5px;
   font-size: $sm_font + 4;
+  font-family: 'Dancing Script';
+  padding: 5px;
   line-height: 1em;
 }
 
@@ -34,4 +37,19 @@
   text-align: center;
   font-size: $sm_font;
   font-family: 'Dancing Script';
+}
+
+%input_btn {
+  cursor: pointer;
+  font-family: 'Dancing Script';
+  font-size: $sm_font;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  outline: none;
+}
+
+%input_btn:hover {
+  background-color: white;
+  color: $secondary_color;
 }

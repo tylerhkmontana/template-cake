@@ -9,7 +9,7 @@ $subsection_margin: 10px 0;
 }
 
 .footer {
-  background-color: black;
+  background-color: $grey_color;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -22,25 +22,22 @@ $subsection_margin: 10px 0;
 }
 
 .footer_storeinfo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
   margin: $subsection_margin
 }
 
 .footer_storehours {
   @extend %format;
-  align-items: flex-start;
-  flex: 1;
+
 }
 
 .footer_address {
   @extend %format;
-  flex: 1;
 }
 
 .footer_contact {
   @extend %format;
-  align-items: flex-end;
-  flex: 1;
 }
 
 .footer_copyright {
