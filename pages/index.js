@@ -1,7 +1,7 @@
-import cssVariables from '../styles/styleVariables'
+import styles from '../styles/home.module.scss'
 import Layout from '../components/layout'
 import Background from '../components/background'
-import btnStyle from '../styles/button.module.css'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import readDir from '../lib/readDir'
 
@@ -37,76 +37,72 @@ export default function Home(props) {
         props.allBackgroundSrc.map((src, i) => 
           <Background 
             key={i} 
-            imgSrc={`/images/${src}`} 
+            imgSrc={`/images/background_home/${src}`} 
             translate={backgroundTranslate} 
             translateScale={4}
             initialPos={(viewportHeight/4 * 2)*i}
             zIndex={-i}
             />)
       }
-      <div className="welcome_section"> 
-        <h1 className="welcome_text">Cake.</h1>
-        {/* <div className="welcome_button_container">
-          <button className={btnStyle.button}>Menu</button>
-          <button className={btnStyle.button}>Contact</button>
-        </div> */}
+      <div className={styles.welcome_section}> 
+        <h1 className={styles.welcome_text}>Cake.</h1>
       </div>
       
-      <div className="introduction_section">
-        <h1 data-aos="fade-right" data-aos-delay="50">Hello World!</h1>
+      <div className={styles.intro}>
+        <div className={styles.intro_image} data-aos="fade-in"></div>
+        <div className={styles.section_description_container}>
+          <h2 className={styles.intro_header} data-aos="fade-left" data-aos-delay="150">Flavors.</h2>
+          <p className={styles.intro_description} data-aos="fade-in" data-aos-duration="1000">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <div className={styles.section_btn_container} data-aos="fade-up" data-aos-offset="50">
+            <Link href="/menu"><button className={styles.intro_btn}>Go to menu &rarr;</button></Link>
+          </div>
+        </div>
       </div>
 
-      <div className="section_divider"></div>
-
-      <div className="introduction_section">
-        <h1 data-aos="fade-right" data-aos-delay="50">Hello World!</h1>
+      <div className={styles.catering}>
+        <h1 className={styles.catering_header} data-aos="fade-down">Want to order catering?</h1>
+        <div className={styles.catering_info}>
+          <div className={styles.catering_description} data-aos="fade-left">
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div className={styles.catering_contact}>
+              <div className={styles.contact_form} data-aos="fade-up">
+                <h3 className={styles.contact_form_header}>Contact Us</h3>
+                <input className={styles.input_text} type="text" placeholder="your name"/>
+                <input className={styles.input_text} type="text" placeholder="buisness name"/>
+                <input className={styles.input_text} type="email" placeholder="your email"/>
+                <textarea className={styles.input_textarea} placeholder="how may I help you?"/>
+              </div>
+          </div>
+        </div>
       </div>
 
-      <div className="section_divider"></div>
+      <div className={styles.custom}>
+        <div className={styles.section_description_container}>
+          <h2 className={styles.custom_header} data-aos="fade-right" data-aos-delay="150">Customize.</h2>
+          <p className={styles.custom_description} data-aos="fade-in" data-aos-duration="1000">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div className={styles.custom_image} data-aos="fade-in"></div>
+      </div>
+
+      <div className={styles.just_divider}></div>
       </Layout>
 
       <style jsx>{`
-        .section_divider {
-          height: 100vh;
-        }
-        .welcome_section {
-          height: 100vh;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        .welcome_text {
-          font-size: ${cssVariables.welcome_font};
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-          color: white;
-          margin: 0 0 150px 0;
-        }
-        .welcome_button_container {
-          display: flex;
-          justify-content: center;
-        }
-
-        .welcome_button_container > button {
-          font-size: 3em;
-          font-weight: bold;
-          margin: 0 20px;
-        }
-
-        .introduction_section {
-          height: 100vh;
-          background-color: ${cssVariables.primary_color};
-          padding-top: 500px;
-        }
+        
       `}</style>
     </>
   )
 }
 
 export async function getStaticProps() {
-  const allBackgroundSrc = readDir('/public/images')
+  const allBackgroundSrc = readDir('/public/images/background_home')
 
   return {
     props: {

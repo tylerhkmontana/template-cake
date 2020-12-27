@@ -1,0 +1,194 @@
+@import './variables.scss';
+@import './input.scss';
+
+.welcome_section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome_text {
+  font-size: $xxlg_font;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  margin: 0 0 150px 0;
+}
+
+// Section Extension
+%section {
+  display: flex;
+  height: 100vh;
+}
+
+%section_image {
+  width: 40%;  
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%section_description_header {
+  width: 100%;
+  text-align: start;
+  line-height: 75%;
+  font-size: 30vh;
+}
+
+.section_description_container {
+  width: 60%;
+  height: 100%;
+}
+
+%section_description {
+  width: 100%;
+  height: 70vh;
+  margin: 0 0 5% 0;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.section_btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+%section_btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: $sm_font;
+  cursor: pointer;
+}
+
+%section_btn:hover {
+  text-shadow: 0 0 5px white;
+}
+
+// Divider Extension 
+%section_divider {
+  height: 100vh;
+}
+
+%section_divider_header {
+  height: 20%;
+  font-size: $xxlg_font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.just_divider {
+  @extend %section_divider;
+}
+
+// Intro Section
+.intro {
+  @extend %section;
+  background-color: $secondary_color;
+}
+
+.intro_image {
+  @extend %section_image;
+  background-image: url(/images/intro_image.jpg)
+}
+
+.intro_header {
+  @extend %section_description_header;
+}
+
+.intro_description {
+  @extend %section_description;
+  height: 65vh;
+}
+
+.intro_btn {
+ @extend %section_btn;
+ margin: 0 25px 0 0;
+}
+
+// Custom Section
+.custom {
+  @extend %section;
+  background-color: $primary_color;
+}
+
+.custom_image {
+  @extend %section_image;
+  background-image: url(/images/custom_image.jpg)
+}
+
+.custom_header {
+  @extend %section_description_header;
+  text-align: end;
+}
+
+.custom_description {
+  @extend %section_description;
+}
+
+// Catering Divider
+.catering {
+  @extend %section_divider;
+}
+
+.catering_header {
+  @extend %section_divider_header;
+}
+
+.catering_info {
+  display: flex;
+  height: 80%;
+  width: 100%;
+}
+
+.catering_description {
+  margin: 0;
+  flex: 1;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-size: $lg_font;
+}
+
+.catering_contact {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.contact_form {
+  height: 80%;
+  width: 90%;
+  background-color: $secondary_color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.contact_form_header {
+  text-align: center;
+  color: white;
+  font-family: 'Dancing Script';
+  font-size: $lg_font;
+}
+
+.input_text {
+  @extend %input_text;
+  margin: 0 0 10px 0;
+}
+
+.input_textarea {
+  @extend %input_textarea;
+  margin: 0 0 10px 0;
+}

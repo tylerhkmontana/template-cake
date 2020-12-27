@@ -8,9 +8,9 @@ export default function Background(props) {
     setTranslate(props.translate/props.translateScale)
     let currPos = props.initialPos - translate
     let invisiblePos = -window.innerHeight / props.translateScale
-    if(currPos < invisiblePos * 1.15 && visibility) {
+    if(currPos < invisiblePos * 1.2 && visibility) {
       setVisibility(false)
-    } else if (currPos > invisiblePos * 1.15 && !visibility) {
+    } else if (currPos > invisiblePos * 1.2 && !visibility) {
       setVisibility(true)
     }
   }, [props.translate])
@@ -20,8 +20,7 @@ export default function Background(props) {
       className="background" 
       style={{
         transform: `translateY(${props.initialPos - translate}px)`,
-        zIndex: props.zIndex - 1,
-        display: visibility ? 'block' : 'none'
+        zIndex: visibility ? props.zIndex - 1 : -999
       }}></div>
     <style jsx>{`
         .background {
