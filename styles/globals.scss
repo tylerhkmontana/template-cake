@@ -1,6 +1,8 @@
+@import './lib/variables.scss';
+
 html,
 body {
-  font-family: Abel;
+  font-family: $normal-font;
   overflow-x: hidden;
 }
 

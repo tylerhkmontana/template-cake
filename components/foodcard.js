@@ -1,4 +1,4 @@
-import styles from './foodcard.module.scss'
+import styles from './styles/foodcard.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 

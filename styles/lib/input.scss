@@ -3,7 +3,7 @@
 %input_text {
   border: none;
   background-color: transparent;
-  font-family: 'Dancing Script';
+  font-family: $script-font;
   outline: none;
   border-bottom: 2px solid white;
   color: white;
@@ -14,7 +14,7 @@
 %input_text::placeholder {
   color: white;
   text-align: center;
-  font-family: 'Dancing Script';
+  font-family: $script-font;
   font-size: $sm_font;
 }
 
@@ -27,7 +27,7 @@
   background-color: transparent;
   border-radius: 5px;
   font-size: $sm_font + 4;
-  font-family: 'Dancing Script';
+  font-family: $script-font;
   padding: 5px;
   line-height: 1em;
 }
@@ -36,12 +36,12 @@
   color: white;
   text-align: center;
   font-size: $sm_font;
-  font-family: 'Dancing Script';
+  font-family: $script-font;
 }
 
 %input_btn {
   cursor: pointer;
-  font-family: 'Dancing Script';
+  font-family: $script-font;
   font-size: $sm_font;
   background-color: transparent;
   border: 2px solid white;
