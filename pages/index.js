@@ -1,4 +1,4 @@
-import styles from '../styles/home.module.scss'
+import styles from '../styles/page/home.module.scss'
 import Layout from '../components/layout'
 import Background from '../components/background'
 import Link from 'next/link'

@@ -1,7 +1,8 @@
 import styles from './foodcard.module.scss'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export default function Foodcard() {
+export default function Foodcard(props) {
   const container = {
     active: { 
       scale: 1.1,
@@ -28,12 +29,10 @@ export default function Foodcard() {
     },
     info: {
       active: { 
-        display: 'block',
-        rotateY: [null, 180, 0],
-        transition: { duration: 1, ease: ["easeOut", "easeIn"] }
+        display: 'flex'
       },
       deactive: { 
-        display: 'none',
+        display: 'none'
       }
     }
   }
@@ -43,8 +42,21 @@ export default function Foodcard() {
       whileHover="active"
       initial="deactive"
       variants={container}>
-        <motion.p className={styles.info} variants={card.info}>Active</motion.p>
-        <motion.p className={styles.preview} variants={card.preview}>Deactive</motion.p>
+        <motion.div className={styles.preview} variants={card.preview}>
+          <div className={styles.preview_img}>
+            <Image
+              src={props.imgSrc}
+              alt={props.itemName}
+              layout="fill"
+              objectFit="fill"
+            />
+          </div>
+          <h2>{props.itemName}</h2>
+        </motion.div>
+        <motion.div className={styles.info} variants={card.info}>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+          <h2>$42</h2>
+        </motion.div>
     </motion.div>
   );
 }

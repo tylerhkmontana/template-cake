@@ -1,5 +1,5 @@
 import Layout from '../components/layout'
-import styles from '../styles/about.module.scss'
+import styles from '../styles/page/about.module.scss'
 import Background from '../components/background'
 import { useState, useEffect } from 'react'
 
