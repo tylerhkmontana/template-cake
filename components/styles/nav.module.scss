@@ -6,10 +6,10 @@
   align-items: center;
   position: fixed;
   width: 100vw;
+  z-index: 999;
 }
 
 .route_btn {
-  font-size: $sm_font;
   margin: 0 0 0 20px;
   font-weight: bold;
 }

@@ -30,6 +30,11 @@ export default function Footer() {
         <span>Photo by <a href="https://unsplash.com/@sbellocillo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Stephen Bellocillo</a> on <a href="https://unsplash.com/s/photos/cake?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
         <span>Photo by <a href="https://unsplash.com/@ninjason?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jason Leung</a> on <a href="https://unsplash.com/s/photos/cake?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
         <a href='https://pngtree.com/so/dessert-clipart'>dessert clipart png from pngtree.com</a>
+        Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+        Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+        <a href='https://pngtree.com/so/muffin-clipart'>muffin clipart png from pngtree.com</a>
+        <a href='https://pngtree.com/so/cream'>cream png from pngtree.com</a>
+        <a href='https://pngtree.com/so/food'>food png from pngtree.com</a>
       </div>
     </div>
   );

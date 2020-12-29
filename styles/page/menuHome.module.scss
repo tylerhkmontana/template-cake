@@ -1,0 +1,13 @@
+@import '../lib/variables.scss';
+
+.gallery {
+  position: relative;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: auto auto auto;
+  background-color: $primary_color;
+  justify-items: center;
+  column-gap: auto;
+  row-gap: 50px;
+  padding: 75px 30px;
+}

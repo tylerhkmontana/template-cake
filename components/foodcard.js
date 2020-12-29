@@ -7,7 +7,7 @@ export default function Foodcard(props) {
     active: { 
       scale: 1.1,
       transition: {
-        when: "beforeChildren",
+        when: "afterChildren",
       } 
     },
     deactive: { 

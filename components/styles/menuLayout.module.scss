@@ -1,0 +1,54 @@
+@import '../../styles/lib/variables.scss';
+
+.intro {
+  width: 100vw;
+  height: 50vh;
+  background-color: $menu_color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h1 {
+    height: 50%;
+    font-size: 18vh;
+  }
+}
+
+.main {
+  position: relative;
+}
+
+.menu_icon {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $secondary_color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 0 0;
+  z-index: 2;
+  height: 100%;
+  width: 0;
+
+  h2 {
+    font-size: $xlg-font;
+  }
+
+  a {
+    font-size: $lg-font;
+    cursor: pointer;
+  }
+
+  a:hover {
+    text-shadow: 0 0 5px white;
+  }
+}
