@@ -25,12 +25,10 @@
   height: 100vh;
 }
 
-%section_image {
+.section_image {
+  position: relative;
   width: 40%;  
   height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 %section_description_header {
@@ -98,11 +96,6 @@
   background-color: $secondary_color;
 }
 
-.intro_image {
-  @extend %section_image;
-  background-image: url(/images/intro_image.jpg)
-}
-
 .intro_header {
   @extend %section_description_header;
 }
@@ -122,11 +115,6 @@
 .custom {
   @extend %section;
   background-color: $primary_color;
-}
-
-.custom_image {
-  @extend %section_image;
-  background-image: url(/images/custom_image.jpg)
 }
 
 .custom_header {

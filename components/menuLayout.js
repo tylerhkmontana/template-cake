@@ -2,10 +2,11 @@ import Layout from './layout'
 import styles from './styles/menuLayout.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
+
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
-export default function MenuLayout({children}) {
+export default function MenuLayout({children, categories}) {
   const [isToggle, setIsToggle] = useState(false)
 
   const nav = {
@@ -53,11 +54,11 @@ export default function MenuLayout({children}) {
           variants={nav} 
           className={styles.nav}
         >
-          <motion.h2 variants={item}>Menu</motion.h2>
-          <Link href="/menu"><motion.a variants={item}>Cake</motion.a></Link>
-          <Link href="/menu"><motion.a variants={item}>Muffin</motion.a></Link>
-          <Link href="/menu"><motion.a variants={item}>Cup Cake</motion.a></Link>
-          <Link href="/menu"><motion.a variants={item}>Cookies</motion.a></Link>
+          <Link href="/menu"><motion.h2 variants={item}>Menu</motion.h2></Link>
+          {
+            categories.map((category, i) => 
+              <Link key={i} href={`/menu/${category}`}><motion.a variants={item}>{category}</motion.a></Link>)
+          }
         </motion.div>
         {children}
       </div>

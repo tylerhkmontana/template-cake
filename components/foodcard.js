@@ -2,7 +2,7 @@ import styles from './styles/foodcard.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export default function Foodcard(props) {
+export default function Foodcard({ imgSrc, name, description, price }) {
   const container = {
     active: { 
       scale: 1.1,
@@ -45,17 +45,17 @@ export default function Foodcard(props) {
         <motion.div className={styles.preview} variants={card.preview}>
           <div className={styles.preview_img}>
             <Image
-              src={props.imgSrc}
-              alt={props.itemName}
+              src={imgSrc}
+              alt={name}
               layout="fill"
               objectFit="fill"
             />
           </div>
-          <h2>{props.itemName}</h2>
+          <h2>{name}</h2>
         </motion.div>
         <motion.div className={styles.info} variants={card.info}>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          <h2>$42</h2>
+          <p>"{description}"</p>
+          <h2>${price}</h2>
         </motion.div>
     </motion.div>
   );

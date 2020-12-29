@@ -1,40 +1,34 @@
 import { useEffect, useState } from 'react'
+import styles from './styles/background.module.scss'
+import Image from 'next/image'
 
-export default function Background(props) {
+export default function Background({ imgSrc, transform, translateScale, initialPos, zIndex }) {
   const [translate, setTranslate] = useState(0)
   const [visibility, setVisibility] = useState(true)
   
   useEffect(() => {
-    setTranslate(props.translate/props.translateScale)
-    let currPos = props.initialPos - translate
-    let invisiblePos = -window.innerHeight / props.translateScale
+    setTranslate(transform / translateScale)
+    let currPos = initialPos - translate
+    let invisiblePos = -window.innerHeight / translateScale
     if(currPos < invisiblePos * 1.2 && visibility) {
       setVisibility(false)
     } else if (currPos > invisiblePos * 1.2 && !visibility) {
       setVisibility(true)
     }
-  }, [props.translate])
+  }, [transform])
   return (
-    <>
     <div 
-      className="background" 
+      className={styles.background} 
       style={{
-        transform: `translateY(${props.initialPos - translate}px)`,
-        zIndex: visibility ? props.zIndex - 1 : -999
-      }}></div>
-    <style jsx>{`
-        .background {
-          position: fixed;
-          top: 0;
-          z-index: -1;
-          background-image: url(${props.imgSrc});
-          background-size: cover;
-          background-position: center;
-          height: 100vh;
-          width: 100vw;
-          perspective: 100px;
-        }
-      `}</style>
-    </>
+        transform: `translateY(${initialPos - translate}px)`,
+        zIndex: visibility ? zIndex - 1 : -999
+      }}>
+        <div className={styles.image_container}>
+          <Image 
+            src={imgSrc}
+            layout="fill"
+            objectFit="cover"/>      
+        </div>
+      </div>
   );
 }

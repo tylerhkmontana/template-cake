@@ -20,9 +20,9 @@ export default function Navbar() {
       </div>
      
       <div className={styles.social_media_container}>
-        <a href="#"><img src="icons/facebook.svg"/></a>
-        <a href="#"><img src="icons/instagram.svg"/></a>
-        <a href="#"><img src="icons/twitter.svg"/></a>
+        <a href="#"><img src="/icons/facebook.svg"/></a>
+        <a href="#"><img src="/icons/instagram.svg"/></a>
+        <a href="#"><img src="/icons/twitter.svg"/></a>
       </div>
     </div>
   );

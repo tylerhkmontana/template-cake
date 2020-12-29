@@ -41,6 +41,11 @@
 
   h2 {
     font-size: $xlg-font;
+    cursor: pointer;
+  }
+
+  h2:hover {
+    text-shadow: 0 0 5px white;
   }
 
   a {

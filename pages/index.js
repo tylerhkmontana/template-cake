@@ -2,10 +2,9 @@ import styles from '../styles/page/home.module.scss'
 import Layout from '../components/layout'
 import Background from '../components/background'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import readDir from '../lib/readDir'
-
-import '@animxyz/core'
+import { readDir } from '../lib/fileServices'
 
 export default function Home(props) {
   const [backgroundTranslate, setBackgroundTranslate] = useState(0)
@@ -31,14 +30,13 @@ export default function Home(props) {
   }, [])
 
   return (
-    <>
       <Layout>
       {
         props.allBackgroundSrc.map((src, i) => 
           <Background 
             key={i} 
             imgSrc={`/images/background_home/${src}`} 
-            translate={backgroundTranslate} 
+            transform={backgroundTranslate} 
             translateScale={4}
             initialPos={(viewportHeight/4 * 2)*i}
             zIndex={-i}
@@ -49,7 +47,12 @@ export default function Home(props) {
       </div>
       
       <div className={styles.intro}>
-        <div className={styles.intro_image} data-aos="fade-in"></div>
+        <div className={styles.section_image} data-aos="fade-in" data-aos-duration="1000">
+          <Image 
+            src="/images/intro_image.jpg"
+            objectFit="cover"
+            layout="fill"/>
+        </div>
         <div className={styles.section_description_container}>
           <h2 className={styles.intro_header} data-aos="fade-left" data-aos-delay="150">Flavors.</h2>
           <p className={styles.intro_description} data-aos="fade-in" data-aos-duration="1000">
@@ -89,16 +92,16 @@ export default function Home(props) {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        <div className={styles.custom_image} data-aos="fade-in"></div>
+        <div className={styles.section_image} data-aos="fade-in" data-aos-duration="1000">
+          <Image 
+            src="/images/custom_image.jpg"
+            objectFit="cover"
+            layout="fill"/>
+        </div>
       </div>
 
       <div className={styles.just_divider}></div>
       </Layout>
-
-      <style jsx>{`
-        
-      `}</style>
-    </>
   )
 }
 
