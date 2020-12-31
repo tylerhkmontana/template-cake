@@ -1,4 +1,4 @@
-@import '../../styles/lib/variables.scss';
+@import '../../styles/lib/lib.scss';
 
 .intro {
   width: 100vw;
@@ -42,10 +42,6 @@
   h2 {
     font-size: $xlg-font;
     cursor: pointer;
-  }
-
-  h2:hover {
-    text-shadow: 0 0 5px white;
   }
 
   a {

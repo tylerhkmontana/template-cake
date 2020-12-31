@@ -2,12 +2,20 @@ import Layout from './layout'
 import styles from './styles/menuLayout.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function MenuLayout({children, categories}) {
   const [isToggle, setIsToggle] = useState(false)
+  const router = useRouter()
+
+  useEffect(() => {
+    if (router.route === '/menu') {
+      router.push(`/menu/${categories[0]}`)
+    }
+  })
 
   const nav = {
     on: {
@@ -54,7 +62,7 @@ export default function MenuLayout({children, categories}) {
           variants={nav} 
           className={styles.nav}
         >
-          <Link href="/menu"><motion.h2 variants={item}>Menu</motion.h2></Link>
+          <motion.h2 variants={item}>Menu</motion.h2>
           {
             categories.map((category, i) => 
               <Link key={i} href={`/menu/${category}`}><motion.a variants={item}>{category}</motion.a></Link>)

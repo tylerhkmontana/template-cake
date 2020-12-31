@@ -1,4 +1,4 @@
-@import '../../styles/lib/variables.scss';
+@import '../../styles/lib/lib.scss';
 
 .nav_bar {
   display: flex;
@@ -7,6 +7,9 @@
   position: fixed;
   width: 100vw;
   z-index: 999;
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .route_btn {
@@ -31,7 +34,6 @@
 .logo {
   font-size: $lg_font;
   font-weight: bold;
-  font-family: 'Dancing Script';  
 }
 
 .logo:hover {
@@ -47,7 +49,74 @@
 .social_media_container img {
   width: 30px;
   height: 30px;
-  margin-right: 20px;
+  margin: 0 20px 0 0;
   display: flex;
   align-items: center;
+}
+
+// Mobile Design
+
+.nav_bar_toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.nav_bar_mobile {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary_color;
+  z-index: -999;
+  
+  @include breakpoint(mobile) {
+    display: flex;
+  }
+
+  .route_btn {
+    margin: 20px 0;
+    font-weight: bold;
+  }
+}
+
+.logo_mobile {
+  display: none;
+  font-size: $lg_font;
+  font-weight: bold;
+  font-family: 'Dancing Script'; 
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 25vw;
+  margin: auto; 
+  z-index: 998;
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.social_media_container_mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 998;
+  @include breakpoint(mobile) {
+    display: block;
+  }
+
+  img {
+    margin: 20px 20px 0 0;
+  }
 }

@@ -1,4 +1,3 @@
-import Background from './background';
 import Nav from './navbar'
 import Footer from './footer'
 

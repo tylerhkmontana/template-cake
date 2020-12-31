@@ -1,5 +1,4 @@
-@import '../lib/variables.scss';
-@import '../lib/input.scss';
+@import '../lib/lib.scss';
 
 .welcome_section {
   height: 100vh;
@@ -23,12 +22,21 @@
 %section {
   display: flex;
   height: 100vh;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
 }
 
 .section_image {
   position: relative;
   width: 40%;  
   height: 100vh;
+  @include breakpoint(tablet) {
+    width: 50%;
+  }
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 %section_description_header {
@@ -38,11 +46,20 @@
   line-height: 75%;
   height: 30%;
   font-size: 14vw;
+  @include breakpoint(mobile) {
+    height: 15%;
+  }
 }
 
 .section_description_container {
   width: 60%;
   height: 100%;
+  @include breakpoint(tablet) {
+    width: 50%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
 }
 
 %section_description {

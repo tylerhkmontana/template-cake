@@ -1,4 +1,4 @@
-@import './lib/variables.scss';
+@import './lib/lib.scss';
 
 html,
 body {
@@ -18,6 +18,10 @@ a {
   line-height: 2em;
   font-size: 24px;
   color: white;
+
+  @include breakpoint(mobile) {
+    line-height: 1.5em;
+  }
 }
 
 ::-webkit-scrollbar {

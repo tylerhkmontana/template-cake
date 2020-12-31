@@ -1,0 +1,89 @@
+@import '../lib/lib.scss';
+
+.intro {
+  width: 100vw;
+  height: 50vh;
+  background-color: $grey_color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h1 {
+    height: 50%;
+    font-size: 18vh;
+  }
+}
+
+.info {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.map_contact {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $grey_color;
+}
+
+.contact_form_container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_form {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.contact_form_header {
+  text-align: center;
+  color: white;
+  font-family: $script-font;
+  font-size: $lg_font;
+}
+
+.input_text {
+  @extend %input_text;
+  margin: 0 0 10px 0;
+}
+
+.input_textarea {
+  @extend %input_textarea;
+  margin: 0 0 10px 0;
+}
+
+.input_btn {
+  @extend %input_btn;
+}
+
+.input_btn:hover {
+  color: $grey_color;
+}
+
+.map_container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map {
+  height: 90%;
+  width: 90%;
+}
