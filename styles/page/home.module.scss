@@ -50,6 +50,9 @@
   @include breakpoint(mobile) {
     height: 15%;
   }
+  @include breakpoint(tablet) {
+    font-size: 11vw;
+  }
 }
 
 .section_description_container {
@@ -150,7 +153,6 @@
 
 .custom_header {
   @extend %section_description_header;
-  font-size: 14vw;
   text-align: end;
 }
 
@@ -169,6 +171,10 @@
 .catering_header {
   @extend %section_divider_header;
   @include breakpoint(mobile) {
+    font-size: $xlg_font;
+    line-height: 1em;
+  }
+  @include breakpoint(tablet) {
     font-size: $xlg_font;
     line-height: 1em;
   }

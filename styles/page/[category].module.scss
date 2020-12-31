@@ -15,4 +15,8 @@
   @include breakpoint(mobile) {
     grid-template-columns: auto;
   }
+
+  @include breakpoint(tablet) {
+    grid-template-columns: auto auto;
+  }
 }
