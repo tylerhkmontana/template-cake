@@ -7,7 +7,7 @@ import { readDir } from '../../lib/fileServices'
 export default function Category({ categories, category, items }) {
 
   return (
-    <MenuLayout key={category} categories={categories}>
+    <MenuLayout key={category} categories={categories} currCategory={category}>
       <div className={styles.gallery}>
         {
           items.map((item, i) => 

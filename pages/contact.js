@@ -45,20 +45,8 @@ export default function Contact() {
       </div>
 
       <div className={styles.map_contact}>
-        <div className={styles.map_container}>
-          <iframe 
-            className={styles.map}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.848126206543!2d-73.81551428459343!3d40.765364979326236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c261f8f14928bb%3A0x503c6c72e9e2450c!2sHanyang%20Bunshik!5e0!3m2!1sen!2sus!4v1608587207928!5m2!1sen!2sus" 
-            frameBorder="0" 
-            allowFullScreen="" 
-            aria-hidden="false" 
-            tabIndex="0"
-            title="Hollywood"
-            data-aos="fade-up" data-aos-duration="1000"></iframe>
-        </div>
-
         <div className={styles.contact_form_container}>
-          <div className={styles.contact_form} data-aos="fade-left">
+          <div className={styles.contact_form} data-aos="fade-right">
             <h3 className={styles.contact_form_header}>Contact Us</h3>
             <input className={styles.input_text} type="text" placeholder="your name"/>
             <input className={styles.input_text} type="text" placeholder="buisness name"/>
@@ -66,6 +54,18 @@ export default function Contact() {
             <textarea className={styles.input_textarea} placeholder="how may we help you?"/>
             <button className={styles.input_btn}>Send</button>
           </div>
+        </div>
+
+        <div className={styles.map_container}>
+          <iframe 
+            className={styles.map}
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52864.87101914459!2d-118.36149759132728!3d34.09374583208188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf07045279bf%3A0xf67a9a6797bdfae4!2sHollywood%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1609398516146!5m2!1sen!2sus" 
+            frameBorder="0" 
+            allowFullScreen="" 
+            aria-hidden="false" 
+            tabIndex="0"
+            title="Hollywood"
+            data-aos="fade-up" data-aos-duration="1000"></iframe>
         </div>
       </div>
     </Layout>

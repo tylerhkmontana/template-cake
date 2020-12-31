@@ -11,4 +11,8 @@
   column-gap: auto;
   row-gap: 50px;
   padding: 75px 30px;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: auto;
+  }
 }

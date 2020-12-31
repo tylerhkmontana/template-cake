@@ -51,12 +51,13 @@ export default function Home(props) {
           <Image 
             src="/images/intro_image.jpg"
             objectFit="cover"
+            objectPosition="center"
             layout="fill"/>
         </div>
         <div className={styles.section_description_container}>
           <h2 className={styles.intro_header} data-aos="fade-left" data-aos-delay="150">Flavors.</h2>
           <p className={styles.intro_description} data-aos="fade-in" data-aos-duration="1000">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
           </p>
           <div className={styles.section_btn_container} data-aos="fade-up" data-aos-offset="50">
             <Link href="/menu"><button className={styles.intro_btn}>Go to menu &rarr;</button></Link>
@@ -69,7 +70,7 @@ export default function Home(props) {
         <div className={styles.catering_info}>
           <div className={styles.catering_description} data-aos="fade-left">
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
           </div>
           <div className={styles.catering_contact}>
@@ -82,6 +83,10 @@ export default function Home(props) {
                 <button className={styles.input_btn}>Send</button>
               </div>
           </div>
+          
+          <div className={styles.catering_btn_container}>
+            <Link href="/contact"><button className={styles.catering_btn} data-aos="fade-up" data-aos-offset="50">Go to contact &rarr;</button></Link>
+          </div>
         </div>
       </div>
 
@@ -89,7 +94,7 @@ export default function Home(props) {
         <div className={styles.section_description_container}>
           <h2 className={styles.custom_header} data-aos="fade-right" data-aos-delay="150">Customize.</h2>
           <p className={styles.custom_description} data-aos="fade-in" data-aos-duration="1000">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </div>
         <div className={styles.section_image} data-aos="fade-in" data-aos-duration="1000">

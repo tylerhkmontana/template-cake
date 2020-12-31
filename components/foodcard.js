@@ -40,6 +40,7 @@ export default function Foodcard({ imgSrc, name, description, price }) {
     <motion.div 
       className={styles.foodcard} 
       whileHover="active"
+      whileTap="active"
       initial="deactive"
       variants={container}>
         <motion.div className={styles.preview} variants={card.preview}>

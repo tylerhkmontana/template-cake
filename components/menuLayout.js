@@ -7,8 +7,9 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
-export default function MenuLayout({children, categories}) {
+export default function MenuLayout({children, categories, currCategory}) {
   const [isToggle, setIsToggle] = useState(false)
+  const [viewportWidth, setViewportWidth] = useState(0)
   const router = useRouter()
 
   useEffect(() => {
@@ -16,10 +17,19 @@ export default function MenuLayout({children, categories}) {
       router.push(`/menu/${categories[0]}`)
     }
   })
-
+  
+  useEffect(() => {
+    setViewportWidth(window.innerWidth)
+    function resizeHandler() {
+      setViewportWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', resizeHandler)
+    
+    return () => window.removeEventListener('resize', resizeHandler)
+  }, [])
   const nav = {
     on: {
-      width: '50vw',
+      width: viewportWidth < 1025 ? '100vw' : '50vw',
       transition: {
         ease: 'easeIn',
         when: 'beforeChildren',
@@ -49,11 +59,10 @@ export default function MenuLayout({children, categories}) {
   return (
     <Layout>
       <div className={styles.intro}>
-        <h1>Menu.</h1>
+        <h1>{currCategory}.</h1>
       </div>
 
       <div className={styles.main}>
-
         <div className={styles.menu_icon} onClick={() => setIsToggle(!isToggle)}>
           <Image src={`/icons/${isToggle ? 'close' : 'menu'}.svg`} alt="Menu Icon" width={30} height={30}/>
         </div>

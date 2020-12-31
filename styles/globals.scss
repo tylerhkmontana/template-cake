@@ -21,6 +21,7 @@ a {
 
   @include breakpoint(mobile) {
     line-height: 1.5em;
+    font-size: 5vw;
   }
 }
 

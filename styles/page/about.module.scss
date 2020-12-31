@@ -7,10 +7,17 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  @include breakpoint(mobile) {
+    height: 40vh;
+  }
 
   h1 {
     height: 50%;
     font-size: 18vh;
+    @include breakpoint(mobile) {
+      height: 30%;
+      font-size: 10vh;
+    }
   }
 }
 
@@ -29,6 +36,9 @@
 
   p {
     width: 60%;
+    @include breakpoint(mobile) {
+      width: 90%;
+    }
   }
 }
 
@@ -36,7 +46,9 @@
   height: 100vh;
   background-color: $grey_color;
   display: flex;
-  padding: 100px;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
 }
  
 .philosophy_image {
@@ -46,6 +58,7 @@
 
 .philosophy_description {
   flex: 1;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
