@@ -18,6 +18,12 @@ $subsection_margin: 10px 0;
     font-size: $xsm_font;
     text-align: center;
     line-height: 1.5em;
+    @include breakpoint(mobile) {
+      font-size: $xsm_font_mobile;
+    }
+    @include breakpoint(tablet) {
+      font-size: $xsm_font_mobile;
+    }
   }
 }
 

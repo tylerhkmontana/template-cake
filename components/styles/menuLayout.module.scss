@@ -31,6 +31,12 @@
   top: 20px;
   left: 20px;
   z-index: 3;
+  width: 3vw;
+  height: 3vw;
+  @include breakpoint(mobile) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .nav {

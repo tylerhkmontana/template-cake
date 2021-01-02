@@ -35,6 +35,7 @@ export default function Footer() {
         <a href='https://pngtree.com/so/muffin-clipart'>muffin clipart png from pngtree.com</a>
         <a href='https://pngtree.com/so/cream'>cream png from pngtree.com</a>
         <a href='https://pngtree.com/so/food'>food png from pngtree.com</a>
+        Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
       </div>
     </div>
   );

@@ -32,6 +32,12 @@
   h2 {
     font-size: $xlg_font;
     margin: 0 0 50px 0;
+    @include breakpoint(mobile) {
+      font-size: $xlg_font_mobile;
+    }
+    @include breakpoint(tablet) {
+      font-size: $xlg_font_mobile;
+    }
   }
 
   p {
@@ -65,5 +71,11 @@
 
   h2 {
     font-size: $xlg_font;
+    @include breakpoint(mobile) {
+      font-size: $xlg_font_mobile;
+    }
+    @include breakpoint(tablet) {
+      font-size: $xlg_font_mobile;
+    }
   }
 }

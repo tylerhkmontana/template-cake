@@ -16,6 +16,12 @@
   color: white;
   line-height: 1em;
   margin: 0 0 200px 0;
+  @include breakpoint(mobile) {
+    font-size: $xxlg_font_mobile;
+  }
+  @include breakpoint(tablet) {
+    font-size: $xxlg_font_mobile;
+  }
 }
 
 // Section Extension
@@ -92,6 +98,12 @@
   background-color: transparent;
   font-size: $sm_font;
   cursor: pointer;
+  @include breakpoint(mobile) {
+    font-size: $sm_font_mobile;
+  }
+  @include breakpoint(tablet) {
+    font-size: $sm_font_mobile;
+  }
 }
 
 %section_btn:hover {
@@ -138,11 +150,7 @@
 
 .intro_btn {
  @extend %section_btn;
- font-size: inherit;
  margin: 0 25px 25px 0;
- @include breakpoint(mobile) {
-   font-size: $sm_font;
- }
 }
 
 // Custom Section
@@ -171,11 +179,11 @@
 .catering_header {
   @extend %section_divider_header;
   @include breakpoint(mobile) {
-    font-size: $xlg_font;
+    font-size: $xlg_font_mobile;
     line-height: 1em;
   }
   @include breakpoint(tablet) {
-    font-size: $xlg_font;
+    font-size: $xlg_font_mobile;
     line-height: 1em;
   }
 }
@@ -229,7 +237,6 @@
 .catering_btn {
   @extend %section_btn;
   margin: 0 20px 20px 0;
- 
 }
 
 .catering_btn_container {

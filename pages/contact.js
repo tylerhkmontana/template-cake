@@ -11,7 +11,7 @@ export default function Contact() {
     function handleScroll() {
       setBackgroundTranslate(this.scrollY)
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, {passive:true})
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -56,16 +56,14 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className={styles.map_container}>
+        <div className={styles.map_container} data-aos="fade-up" data-aos-duration="1000">
           <iframe 
             className={styles.map}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52864.87101914459!2d-118.36149759132728!3d34.09374583208188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf07045279bf%3A0xf67a9a6797bdfae4!2sHollywood%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1609398516146!5m2!1sen!2sus" 
             frameBorder="0" 
-            allowFullScreen="" 
             aria-hidden="false" 
             tabIndex="0"
-            title="Hollywood"
-            data-aos="fade-up" data-aos-duration="1000"></iframe>
+            title="Hollywood"></iframe>
         </div>
       </div>
     </Layout>

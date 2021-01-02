@@ -63,9 +63,12 @@ export default function MenuLayout({children, categories, currCategory}) {
       </div>
 
       <div className={styles.main}>
-        <div className={styles.menu_icon} onClick={() => setIsToggle(!isToggle)}>
-          <Image src={`/icons/${isToggle ? 'close' : 'menu'}.svg`} alt="Menu Icon" width={30} height={30}/>
-        </div>
+        <img
+        className={styles.menu_icon} 
+        onClick={() => setIsToggle(!isToggle)}
+        src={`/icons/${isToggle ? 'close' : 'menu'}.svg`} 
+        alt="Menu Icon"/>
+        
         <motion.div 
           animate={isToggle ? 'on' : 'off'}
           variants={nav} 

@@ -1,8 +1,11 @@
 import styles from './styles/foodcard.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 export default function Foodcard({ imgSrc, name, description, price }) {
+  const [isMagnified, setIsMagnified] = useState(false)
+  
   const container = {
     active: { 
       scale: 1.1,
@@ -40,9 +43,11 @@ export default function Foodcard({ imgSrc, name, description, price }) {
     <motion.div 
       className={styles.foodcard} 
       whileHover="active"
-      whileTap="active"
       initial="deactive"
-      variants={container}>
+      animate={isMagnified ? 'active' : 'deactive'}
+      variants={container}
+      onClick={() => setIsMagnified(!isMagnified)}>
+        
         <motion.div className={styles.preview} variants={card.preview}>
           <div className={styles.preview_img}>
             <Image

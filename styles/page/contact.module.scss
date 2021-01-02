@@ -77,6 +77,12 @@
   color: white;
   font-family: $script-font;
   font-size: $lg_font;
+  @include breakpoint(mobile) {
+    font-size: $lg_font_mobile;
+  }
+  @include breakpoint(tablet) {
+    font-size: $lg_font_mobile;
+  }
 }
 
 .input_text {
