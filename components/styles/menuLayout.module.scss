@@ -55,11 +55,26 @@
   h2 {
     font-size: $xlg-font;
     cursor: pointer;
+    @include breakpoint(mobile) {
+      font-size: $xlg-font_mobile;
+    }
+    @include breakpoint(tablet) {
+      font-size: $xlg-font_mobile;
+    }
   }
 
   a {
     font-size: $lg-font;
+    margin: 0 0 5vh 0;
     cursor: pointer;
+    @include breakpoint(mobile) {
+      font-size: $lg-font_mobile;
+      margin: 0 0 20px 0;
+    }
+    @include breakpoint(tablet) {
+      font-size: $lg-font_mobile;
+      margin: 0 0 20px 0;
+    }
   }
 
   a:hover {
